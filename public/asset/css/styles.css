@@ -41,78 +41,66 @@ video {
   border-radius: 8px;
 }
 
-#studentNotification {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
+.contact-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
-  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
 }
 
-#secureWarning {
-  display: none;
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 0, 0, 0.8);
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.contact-link {
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  z-index: 20;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    padding: 0 8px;
-  }
 
-  .content-section {
-    padding: 12px 4px;
-    border-radius: 0;
-    margin: 0;
-  }
+.contact-link:hover {
+  color: #00ff99;
+  transform: scale(1.05);
+}
 
-  h1 {
-    font-size: 2rem;
-    margin-top: 16px;
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
-
-  h2 {
-    font-size: 1.3rem;
+  
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
   }
-
-  p, a, button {
-    font-size: 1rem;
-  }
-
-  video {
-    max-width: 100vw;
+  
+  .home-buttons a {
+    margin-bottom: 10px;
     width: 100%;
-    border-width: 1px;
-    border-radius: 6px;
+    text-align: center;
   }
-
-  #studentNotification {
-    width: 90vw;
-    max-width: 95vw;
-    padding: 12px;
-    font-size: 1rem;
+  
+  #homePage h1 {
+    font-size: 2.5rem;
   }
-
-  #secureWarning {
-    width: 90vw;
-    font-size: 0.95rem;
-    padding: 8px 10px;
+  
+  .content-section {
+    padding: 1.5rem;
+    margin: 0.5rem auto;
   }
-}
-
-/* Optional: Make sure html and body take full height on mobile */
-html, body {
-  min-height: 100vh;
+  
+  #typing-test, #contact-marvin {
+    padding: 1.5rem;
+  }
 }
